@@ -26,7 +26,7 @@ export const isObject = (val: unknown): val is PlainObject =>
 export const getValue = <T = unknown>(obj: unknown, path?: Path): T | undefined => {
     if (isNullish(obj) || !path) return undefined
 
-    if (typeof path === 'string' && Object.prototype.hasOwnProperty.call(obj, path))
+    if (typeof path === 'string' && Object.hasOwn(obj, path))
         return (obj as Record<string, unknown>)[path] as T
 
     const pathArray = Array.isArray(path)
@@ -105,7 +105,7 @@ export const pick = <T extends PlainObject, K extends keyof T>(
 ): Partial<T> => {
     if (isNullish(obj)) return {}
     return keys.reduce<Partial<T>>((acc, key) => {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        if (Object.hasOwn(obj, key)) {
             acc[key] = obj[key]
         }
         return acc
@@ -127,9 +127,9 @@ export const omit = <T extends PlainObject, K extends keyof T>(
 }
 
 export const partial =
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    // biome-ignore lint/suspicious/noExplicitAny: allow to use any here
         <T extends (...args: any[]) => any>(fn: T, ...partials: any[]) =>
-        // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+        // biome-ignore lint/suspicious/noExplicitAny: allow to use any here
         (...args: any[]) =>
             fn(...partials, ...args)
 

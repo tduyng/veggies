@@ -1,6 +1,5 @@
-import { Given, Then, world } from '@cucumber/cucumber'
-
 import * as assert from 'node:assert/strict'
+import { Given, Then, world } from '@cucumber/cucumber'
 
 export const install = (): void => {
     /**

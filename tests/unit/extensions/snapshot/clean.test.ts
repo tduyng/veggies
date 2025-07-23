@@ -10,6 +10,7 @@ vi.mock('../../../../src/extensions/snapshot/snapshot.js', () => ({
 describe('extensions > snapshot > clean', () => {
     beforeEach(() => {
         clean.resetReferences()
+        vi.clearAllMocks()
     })
 
     afterAll(() => {

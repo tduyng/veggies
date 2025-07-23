@@ -21,9 +21,7 @@ const getClient = (cookieJar?: CookieJar): AxiosInstance => {
     if (cookieJar) {
         if (!cookieInstance) {
             cookieInstance = wrapper(
-                // @ts-ignore
                 axios.create({
-                    // @ts-ignore
                     jar: cookieJar,
                     withCredentials: true,
                     validateStatus,
@@ -155,9 +153,9 @@ class HttpApiClient {
         if (this.cookieJar) return
 
         this.cookieJar = new CookieJar()
-        // @ts-ignore
+        // @ts-expect-error
         this.cookieJar.rejectPublicSuffixes = false
-        // @ts-ignore
+        // @ts-expect-error
         this.cookieJar.looseMode = true
     }
 
