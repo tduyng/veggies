@@ -45,3 +45,23 @@ Then(/^response should match url encoded snapshot (.+)$/, (snapshotId) => {
 })
 
 const readJsonFile = (filePath) => JSON.parse(fs.readFileSync(filePath))
+
+Given(/^I mock GET http call to (.+) with cookies$/, (path) => {
+    const url = new URL(path)
+    nock(url.origin)
+        .get(url.pathname + url.search)
+        .reply(
+            200,
+            { success: true },
+            {
+                'Set-Cookie': ['TestCookie=testvalue; Path=/; Secure; Domain=' + url.hostname],
+            }
+        )
+})
+
+Given(/^I mock GET http call to (.+) without cookies$/, (path) => {
+    const url = new URL(path)
+    nock(url.origin)
+        .get(url.pathname + url.search)
+        .reply(200, { success: true })
+})
