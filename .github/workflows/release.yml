@@ -15,7 +15,7 @@ run-name: Release v${{ inputs.strategy }}
 jobs:
   release:
     runs-on: ubuntu-24.04
-    if: ${{ github.actor == 'pebie' || github.actor == 'leguellec' }}
+    if: ${{ contains(fromJSON('["pebie", "leguellec", "olivierGuillermEkino"]'), github.actor) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
