@@ -1,4 +1,4 @@
-import type { CastFunction, CastedValue } from '../types.js'
+import type { CastedValue, CastFunction } from '../types.js'
 import { isFunction, isString, setValue } from '../utils/index.js'
 
 const toUndefined = (): undefined => undefined

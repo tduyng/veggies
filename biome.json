@@ -1,8 +1,6 @@
 {
-    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-    "organizeImports": {
-        "enabled": true
-    },
+    "$schema": "https://biomejs.dev/schemas/2.3.5/schema.json",
+    "assist": { "actions": { "source": { "organizeImports": "on" } } },
     "linter": {
         "enabled": true,
         "rules": {
@@ -14,7 +12,8 @@
                 "useLiteralKeys": "off"
             },
             "suspicious": {
-                "noControlCharactersInRegex": "off"
+                "noControlCharactersInRegex": "off",
+                "noTemplateCurlyInString": "off"
             }
         }
     },
@@ -24,7 +23,7 @@
         "indentWidth": 4,
         "lineWidth": 100,
         "formatWithErrors": true,
-        "ignore": [],
+        "includes": ["**"],
         "attributePosition": "auto"
     },
     "javascript": {
@@ -41,24 +40,26 @@
         }
     },
     "files": {
-        "ignore": [
-            ".DS_Store",
-            ".git",
-            ".githooks",
-            ".github",
-            ".idea",
-            ".nyc_output",
-            ".pnpm-store",
-            ".vscode",
-            ".yarn",
-            "build",
-            "coverage",
-            "dist",
-            "lib",
-            "docs",
-            "node_modules",
-            "out",
-            "package.json"
+        "includes": [
+            "**",
+            "!**/.DS_Store",
+            "!**/.git",
+            "!**/.githooks",
+            "!**/.github",
+            "!**/.idea",
+            "!**/.nyc_output",
+            "!**/.pnpm-store",
+            "!**/.vscode",
+            "!**/.yarn",
+            "!**/build",
+            "!**/coverage",
+            "!**/dist",
+            "!**/lib",
+            "!**/docs",
+            "!**/node_modules",
+            "!**/out",
+            "!**/package.json",
+            "!src/@types"
         ]
     }
 }
