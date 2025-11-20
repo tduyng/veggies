@@ -1,4 +1,4 @@
-[![veggies](https://raw.githubusercontent.com/ekino/veggies/master/docs/public/veggies-banner.png)](https://ekino.github.io/veggies/)
+[![veggies](docs/public/veggies-banner.png)](https://ekino.github.io/veggies/)
 
 [![NPM version][npm-image]][npm-url]
 [![Github CI][ci-image]][ci-url]
