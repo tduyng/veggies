@@ -45,3 +45,6 @@ _doc
 events.json
 .pnpm*
 lib/
+**/.vitepress/cache
+**/.vitepress/dist
+!**/docs/public/*

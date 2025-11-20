@@ -67,6 +67,7 @@
         "commitlint": "20.1.0",
         "nock": "14.0.10",
         "typescript": "5.9.3",
+        "vitepress": "1.6.4",
         "vitest": "4.0.9"
     },
     "peerDependencies": {
@@ -84,6 +85,9 @@
         "check": "biome check",
         "check-typing": "tsc -p tsconfig.json --noEmit",
         "examples": "./bin/veggies.js --import examples/support examples/features --tags='@offline'",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs",
         "postinstall": "git config core.hooksPath ./.githooks || true"
     }
 }

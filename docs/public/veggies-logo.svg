@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Green circle background -->
+  <circle cx="50" cy="50" r="48" fill="#10b981" opacity="0.1"/>
+  
+  <!-- Cucumber/veggie shape -->
+  <ellipse cx="50" cy="50" rx="15" ry="35" fill="#10b981"/>
+  
+  <!-- Highlights -->
+  <ellipse cx="45" cy="35" rx="3" ry="8" fill="#34d399" opacity="0.6"/>
+  <ellipse cx="55" cy="45" rx="3" ry="8" fill="#34d399" opacity="0.6"/>
+  <ellipse cx="45" cy="60" rx="3" ry="8" fill="#34d399" opacity="0.6"/>
+  
+  <!-- Small dots for texture -->
+  <circle cx="42" cy="42" r="1.5" fill="#059669"/>
+  <circle cx="58" cy="38" r="1.5" fill="#059669"/>
+  <circle cx="52" cy="55" r="1.5" fill="#059669"/>
+  <circle cx="48" cy="68" r="1.5" fill="#059669"/>
+  
+  <!-- Leaf on top -->
+  <path d="M 50 20 Q 55 18 58 22 Q 56 25 52 24 Q 50 23 50 20 Z" fill="#059669"/>
+</svg>
